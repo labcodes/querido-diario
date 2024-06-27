@@ -1,0 +1,246 @@
+2024-06-26 18:20:18 [scrapy.utils.log] INFO: Scrapy 2.11.0 started (bot: gazette)
+2024-06-26 18:20:18 [scrapy.utils.log] INFO: Versions: lxml 4.9.3.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.2, Twisted 22.10.0, Python 3.10.1 (main, May 15 2023, 19:19:30) [GCC 11.3.0], pyOpenSSL 23.2.0 (OpenSSL 3.1.3 19 Sep 2023), cryptography 41.0.4, Platform Linux-6.8.0-76060800daily20240311-generic-x86_64-with-glibc2.35
+2024-06-26 18:20:18 [municipio_mob_open_source] INFO: Collecting data from 2024-06-01 to 2024-06-26.
+2024-06-26 18:20:18 [scrapy.addons] INFO: Enabled addons:
+[]
+2024-06-26 18:20:18 [py.warnings] WARNING: /home/daniel/.pyenv/versions/3.10.1/envs/querido-diario/lib/python3.10/site-packages/scrapy/utils/request.py:254: ScrapyDeprecationWarning: '2.6' is a deprecated value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting.
+
+It is also the default value. In other words, it is normal to get this warning if you have not defined a value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting. This is so for backward compatibility reasons, but it will change in a future version of Scrapy.
+
+See the documentation of the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting for information on how to handle this deprecation.
+  return cls(crawler)
+
+2024-06-26 18:20:18 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.epollreactor.EPollReactor
+2024-06-26 18:20:18 [scrapy.extensions.telnet] INFO: Telnet Password: beb05c3d3fcbe087
+2024-06-26 18:20:18 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats',
+ 'spidermon.contrib.scrapy.extensions.Spidermon',
+ 'gazette.extensions.StatsPersist']
+2024-06-26 18:20:18 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'gazette',
+ 'COMMANDS_MODULE': 'gazette.commands',
+ 'DOWNLOAD_TIMEOUT': 360,
+ 'FILES_STORE_S3_ACL': 'public-read',
+ 'LOG_FILE': 'log_.txt',
+ 'NEWSPIDER_MODULE': 'gazette.spiders',
+ 'SPIDER_MODULES': ['gazette.spiders'],
+ 'TEMPLATES_DIR': 'templates',
+ 'USER_AGENT': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:108.0) '
+               'Gecko/20100101 Firefox/108.0'}
+2024-06-26 18:20:19 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy_zyte_smartproxy.ZyteSmartProxyMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2024-06-26 18:20:19 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2024-06-26 18:20:19 [scrapy.middleware] INFO: Enabled item pipelines:
+['gazette.pipelines.GazetteDateFilteringPipeline',
+ 'gazette.pipelines.DefaultValuesPipeline',
+ 'gazette.pipelines.QueridoDiarioFilesPipeline',
+ 'spidermon.contrib.scrapy.pipelines.ItemValidationPipeline',
+ 'gazette.pipelines.SQLDatabasePipeline']
+2024-06-26 18:20:19 [scrapy.core.engine] INFO: Spider opened
+2024-06-26 18:20:19 [gazette.database.models] INFO: Populating 'querido_diario_spider' table - Please wait!
+2024-06-26 18:20:19 [gazette.database.models] INFO: Populating 'querido_diario_spider' table - Done!
+2024-06-26 18:20:19 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2024-06-26 18:20:19 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2024-06-26 18:20:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api-lagoadotocantins.barcodigital.com.br/api/publico/diario/calendario?mes=6&ano=2024> (referer: None)
+2024-06-26 18:20:20 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded file from <GET https://api-lagoadotocantins.barcodigital.com.br/arquivo/lagoadotocantins.to.gov.br/diarios/2024/0935/edicao-n-0935-de-26-06-2024.pdf> referred in <None>
+2024-06-26 18:20:20 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded file from <GET https://api-lagoadotocantins.barcodigital.com.br/arquivo/lagoadotocantins.to.gov.br/diarios/2024/568/Edicao-n-568-de-25-06-2024.pdf> referred in <None>
+2024-06-26 18:20:20 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded file from <GET https://api-lagoadotocantins.barcodigital.com.br/arquivo/lagoadotocantins.to.gov.br/diarios/2024/567/Edicao-n-567-de-19-06-2024.pdf> referred in <None>
+2024-06-26 18:20:20 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded file from <GET https://api-lagoadotocantins.barcodigital.com.br/arquivo/lagoadotocantins.to.gov.br/diarios/2024/566/Edicao-n-0566-de-17-06-2024.pdf> referred in <None>
+2024-06-26 18:20:20 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded file from <GET https://api-lagoadotocantins.barcodigital.com.br/arquivo/lagoadotocantins.to.gov.br/diarios/2024/565/Edicao-n-565-de-14-06-2024.pdf> referred in <None>
+2024-06-26 18:20:20 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded file from <GET https://api-lagoadotocantins.barcodigital.com.br/arquivo/lagoadotocantins.to.gov.br/diarios/2024/564/Edicao-n-564-de-13-06-2024.pdf> referred in <None>
+2024-06-26 18:20:20 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded file from <GET https://api-lagoadotocantins.barcodigital.com.br/arquivo/lagoadotocantins.to.gov.br/diarios/2024/563/Edicao-n-0563-de-12-06-2024(1).pdf> referred in <None>
+2024-06-26 18:20:20 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded file from <GET https://api-lagoadotocantins.barcodigital.com.br/arquivo/lagoadotocantins.to.gov.br/diarios/2024/935/Edicao-n-0935-de-10-06-2024.pdf> referred in <None>
+2024-06-26 18:20:20 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded file from <GET https://api-lagoadotocantins.barcodigital.com.br/arquivo/lagoadotocantins.to.gov.br/diarios/2024/561/Edicao-n-561-de-06-06-2024(1).pdf> referred in <None>
+2024-06-26 18:20:20 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded file from <GET https://api-lagoadotocantins.barcodigital.com.br/arquivo/lagoadotocantins.to.gov.br/diarios/2024/560/Edicao-complementar-n-560-de-05-06-2024.pdf> referred in <None>
+2024-06-26 18:20:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api-lagoadotocantins.barcodigital.com.br/api/publico/diario/calendario?mes=6&ano=2024>
+{'date': '2024-06-26',
+ 'edition_number': '0935',
+ 'file_urls': ['https://api-lagoadotocantins.barcodigital.com.br/arquivo/lagoadotocantins.to.gov.br/diarios/2024/0935/edicao-n-0935-de-26-06-2024.pdf'],
+ 'files': [{'checksum': '8dbdebff424d33d9c2847d8b8fd552c7',
+            'path': '2024-06-26/98268344ce41ce375678c6f14a6e02fb8fc8b9a1.pdf',
+            'status': 'uptodate',
+            'url': 'https://api-lagoadotocantins.barcodigital.com.br/arquivo/lagoadotocantins.to.gov.br/diarios/2024/0935/edicao-n-0935-de-26-06-2024.pdf'}],
+ 'is_extra_edition': False,
+ 'power': 'executive',
+ 'scraped_at': '2024-06-26T21:20:20.469642Z',
+ 'territory_id': ''}
+2024-06-26 18:20:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api-lagoadotocantins.barcodigital.com.br/api/publico/diario/calendario?mes=6&ano=2024>
+{'date': '2024-06-25',
+ 'edition_number': '0568',
+ 'file_urls': ['https://api-lagoadotocantins.barcodigital.com.br/arquivo/lagoadotocantins.to.gov.br/diarios/2024/568/Edicao-n-568-de-25-06-2024.pdf'],
+ 'files': [{'checksum': '11098090dbd83b8fb7010ad42e16d46b',
+            'path': '2024-06-25/6e02c9234d4a43376929b78b238980af4b77c1ba.pdf',
+            'status': 'uptodate',
+            'url': 'https://api-lagoadotocantins.barcodigital.com.br/arquivo/lagoadotocantins.to.gov.br/diarios/2024/568/Edicao-n-568-de-25-06-2024.pdf'}],
+ 'is_extra_edition': False,
+ 'power': 'executive',
+ 'scraped_at': '2024-06-26T21:20:20.474967Z',
+ 'territory_id': ''}
+2024-06-26 18:20:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api-lagoadotocantins.barcodigital.com.br/api/publico/diario/calendario?mes=6&ano=2024>
+{'date': '2024-06-19',
+ 'edition_number': '0567',
+ 'file_urls': ['https://api-lagoadotocantins.barcodigital.com.br/arquivo/lagoadotocantins.to.gov.br/diarios/2024/567/Edicao-n-567-de-19-06-2024.pdf'],
+ 'files': [{'checksum': 'c3aff2657d7e60c6db3f53f84f76ca89',
+            'path': '2024-06-19/42391cb5fad2cd4ba7df0a764ee47539c6f6fcb1.pdf',
+            'status': 'uptodate',
+            'url': 'https://api-lagoadotocantins.barcodigital.com.br/arquivo/lagoadotocantins.to.gov.br/diarios/2024/567/Edicao-n-567-de-19-06-2024.pdf'}],
+ 'is_extra_edition': False,
+ 'power': 'executive',
+ 'scraped_at': '2024-06-26T21:20:20.477148Z',
+ 'territory_id': ''}
+2024-06-26 18:20:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api-lagoadotocantins.barcodigital.com.br/api/publico/diario/calendario?mes=6&ano=2024>
+{'date': '2024-06-17',
+ 'edition_number': '0566',
+ 'file_urls': ['https://api-lagoadotocantins.barcodigital.com.br/arquivo/lagoadotocantins.to.gov.br/diarios/2024/566/Edicao-n-0566-de-17-06-2024.pdf'],
+ 'files': [{'checksum': '3ba75788ef025b5086452e71c6de48fb',
+            'path': '2024-06-17/803c981f73b7a31cef58e9f25585b5c91fc74d78.pdf',
+            'status': 'uptodate',
+            'url': 'https://api-lagoadotocantins.barcodigital.com.br/arquivo/lagoadotocantins.to.gov.br/diarios/2024/566/Edicao-n-0566-de-17-06-2024.pdf'}],
+ 'is_extra_edition': False,
+ 'power': 'executive',
+ 'scraped_at': '2024-06-26T21:20:20.478958Z',
+ 'territory_id': ''}
+2024-06-26 18:20:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api-lagoadotocantins.barcodigital.com.br/api/publico/diario/calendario?mes=6&ano=2024>
+{'date': '2024-06-14',
+ 'edition_number': '0565',
+ 'file_urls': ['https://api-lagoadotocantins.barcodigital.com.br/arquivo/lagoadotocantins.to.gov.br/diarios/2024/565/Edicao-n-565-de-14-06-2024.pdf'],
+ 'files': [{'checksum': '7c312bd87ae35803761cad5496b6906b',
+            'path': '2024-06-14/891abaae0dffec08b4b610ca0d572270d37a9b11.pdf',
+            'status': 'uptodate',
+            'url': 'https://api-lagoadotocantins.barcodigital.com.br/arquivo/lagoadotocantins.to.gov.br/diarios/2024/565/Edicao-n-565-de-14-06-2024.pdf'}],
+ 'is_extra_edition': False,
+ 'power': 'executive',
+ 'scraped_at': '2024-06-26T21:20:20.480494Z',
+ 'territory_id': ''}
+2024-06-26 18:20:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api-lagoadotocantins.barcodigital.com.br/api/publico/diario/calendario?mes=6&ano=2024>
+{'date': '2024-06-13',
+ 'edition_number': '0564',
+ 'file_urls': ['https://api-lagoadotocantins.barcodigital.com.br/arquivo/lagoadotocantins.to.gov.br/diarios/2024/564/Edicao-n-564-de-13-06-2024.pdf'],
+ 'files': [{'checksum': '5ff0a1d39bcf6283b2387d9d173c32be',
+            'path': '2024-06-13/ce9a725075998ac4623e58e6b69c20060e6f12f7.pdf',
+            'status': 'uptodate',
+            'url': 'https://api-lagoadotocantins.barcodigital.com.br/arquivo/lagoadotocantins.to.gov.br/diarios/2024/564/Edicao-n-564-de-13-06-2024.pdf'}],
+ 'is_extra_edition': False,
+ 'power': 'executive',
+ 'scraped_at': '2024-06-26T21:20:20.482336Z',
+ 'territory_id': ''}
+2024-06-26 18:20:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api-lagoadotocantins.barcodigital.com.br/api/publico/diario/calendario?mes=6&ano=2024>
+{'date': '2024-06-12',
+ 'edition_number': '0563',
+ 'file_urls': ['https://api-lagoadotocantins.barcodigital.com.br/arquivo/lagoadotocantins.to.gov.br/diarios/2024/563/Edicao-n-0563-de-12-06-2024(1).pdf'],
+ 'files': [{'checksum': 'f3f8eb6dbaf6c0e8416acf1c806a5aac',
+            'path': '2024-06-12/b41ccf953c1faa5cb72cfdc087edb634a478118c.pdf',
+            'status': 'uptodate',
+            'url': 'https://api-lagoadotocantins.barcodigital.com.br/arquivo/lagoadotocantins.to.gov.br/diarios/2024/563/Edicao-n-0563-de-12-06-2024(1).pdf'}],
+ 'is_extra_edition': False,
+ 'power': 'executive',
+ 'scraped_at': '2024-06-26T21:20:20.484128Z',
+ 'territory_id': ''}
+2024-06-26 18:20:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api-lagoadotocantins.barcodigital.com.br/api/publico/diario/calendario?mes=6&ano=2024>
+{'date': '2024-06-10',
+ 'edition_number': '0562',
+ 'file_urls': ['https://api-lagoadotocantins.barcodigital.com.br/arquivo/lagoadotocantins.to.gov.br/diarios/2024/935/Edicao-n-0935-de-10-06-2024.pdf'],
+ 'files': [{'checksum': 'c5c52cee4b83794582410d91d9676e72',
+            'path': '2024-06-10/d9ffa227b90ada4c42a8e366e0413ea8fdc1f35d.pdf',
+            'status': 'uptodate',
+            'url': 'https://api-lagoadotocantins.barcodigital.com.br/arquivo/lagoadotocantins.to.gov.br/diarios/2024/935/Edicao-n-0935-de-10-06-2024.pdf'}],
+ 'is_extra_edition': False,
+ 'power': 'executive',
+ 'scraped_at': '2024-06-26T21:20:20.486080Z',
+ 'territory_id': ''}
+2024-06-26 18:20:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api-lagoadotocantins.barcodigital.com.br/api/publico/diario/calendario?mes=6&ano=2024>
+{'date': '2024-06-06',
+ 'edition_number': '0561',
+ 'file_urls': ['https://api-lagoadotocantins.barcodigital.com.br/arquivo/lagoadotocantins.to.gov.br/diarios/2024/561/Edicao-n-561-de-06-06-2024(1).pdf'],
+ 'files': [{'checksum': '5142a7ba438c7e8d42ffb66408e5d730',
+            'path': '2024-06-06/7d333b46062976215f8fd627dd9af0d505f0ab7e.pdf',
+            'status': 'uptodate',
+            'url': 'https://api-lagoadotocantins.barcodigital.com.br/arquivo/lagoadotocantins.to.gov.br/diarios/2024/561/Edicao-n-561-de-06-06-2024(1).pdf'}],
+ 'is_extra_edition': False,
+ 'power': 'executive',
+ 'scraped_at': '2024-06-26T21:20:20.487813Z',
+ 'territory_id': ''}
+2024-06-26 18:20:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api-lagoadotocantins.barcodigital.com.br/api/publico/diario/calendario?mes=6&ano=2024>
+{'date': '2024-06-05',
+ 'edition_number': '0560',
+ 'file_urls': ['https://api-lagoadotocantins.barcodigital.com.br/arquivo/lagoadotocantins.to.gov.br/diarios/2024/560/Edicao-complementar-n-560-de-05-06-2024.pdf'],
+ 'files': [{'checksum': '3857c3615dafb4bd80a0daf546569824',
+            'path': '2024-06-05/f965af6c6112b84b87117214ac37c967aaafd971.pdf',
+            'status': 'uptodate',
+            'url': 'https://api-lagoadotocantins.barcodigital.com.br/arquivo/lagoadotocantins.to.gov.br/diarios/2024/560/Edicao-complementar-n-560-de-05-06-2024.pdf'}],
+ 'is_extra_edition': False,
+ 'power': 'executive',
+ 'scraped_at': '2024-06-26T21:20:20.491538Z',
+ 'territory_id': ''}
+2024-06-26 18:20:20 [scrapy.core.engine] INFO: Closing spider (finished)
+2024-06-26 18:20:20 [municipio_mob_open_source] INFO: [Spidermon] ------------------------------ MONITORS ------------------------------
+2024-06-26 18:20:20 [municipio_mob_open_source] INFO: [Spidermon] Comparison Between Executions/Days without gazettes... OK
+2024-06-26 18:20:20 [municipio_mob_open_source] INFO: [Spidermon] Requests/Items Ratio/Ratio of requests over items scraped count... OK
+2024-06-26 18:20:20 [municipio_mob_open_source] INFO: [Spidermon] Error Count Monitor/test_stat_monitor... SKIPPED (Unable to find 'log_count/ERROR' in job stats.)
+2024-06-26 18:20:20 [municipio_mob_open_source] INFO: [Spidermon] Finish Reason Monitor/Should have the expected finished reason(s)... OK
+2024-06-26 18:20:20 [municipio_mob_open_source] INFO: [Spidermon] Item Validation Monitor/test_stat_monitor... SKIPPED (Unable to find 'spidermon/validation/fields/errors' in job stats.)
+2024-06-26 18:20:20 [municipio_mob_open_source] INFO: [Spidermon] ----------------------------------------------------------------------
+2024-06-26 18:20:20 [municipio_mob_open_source] INFO: [Spidermon] 5 monitors in 0.007s
+2024-06-26 18:20:20 [municipio_mob_open_source] INFO: [Spidermon] OK (skipped=2)
+2024-06-26 18:20:20 [municipio_mob_open_source] INFO: [Spidermon] -------------------------- FINISHED ACTIONS --------------------------
+2024-06-26 18:20:20 [municipio_mob_open_source] INFO: [Spidermon] ----------------------------------------------------------------------
+2024-06-26 18:20:20 [municipio_mob_open_source] INFO: [Spidermon] 0 actions in 0.000s
+2024-06-26 18:20:20 [municipio_mob_open_source] INFO: [Spidermon] OK
+2024-06-26 18:20:20 [municipio_mob_open_source] INFO: [Spidermon] --------------------------- PASSED ACTIONS ---------------------------
+2024-06-26 18:20:20 [municipio_mob_open_source] INFO: [Spidermon] ----------------------------------------------------------------------
+2024-06-26 18:20:20 [municipio_mob_open_source] INFO: [Spidermon] 0 actions in 0.000s
+2024-06-26 18:20:20 [municipio_mob_open_source] INFO: [Spidermon] OK
+2024-06-26 18:20:20 [municipio_mob_open_source] INFO: [Spidermon] --------------------------- FAILED ACTIONS ---------------------------
+2024-06-26 18:20:20 [municipio_mob_open_source] INFO: [Spidermon] ----------------------------------------------------------------------
+2024-06-26 18:20:20 [municipio_mob_open_source] INFO: [Spidermon] 1 action in 0.000s
+2024-06-26 18:20:20 [municipio_mob_open_source] INFO: [Spidermon] OK (skipped=1)
+2024-06-26 18:20:20 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 328,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 1685,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 0.931339,
+ 'file_count': 10,
+ 'file_status_count/uptodate': 10,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2024, 6, 26, 21, 20, 20, 595954, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 7098,
+ 'httpcompression/response_count': 1,
+ 'item_scraped_count': 10,
+ 'log_count/DEBUG': 22,
+ 'log_count/INFO': 33,
+ 'log_count/WARNING': 1,
+ 'memusage/max': 122761216,
+ 'memusage/startup': 122761216,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'spidermon/validation/fields': 80,
+ 'spidermon/validation/items': 10,
+ 'spidermon/validation/validators': 1,
+ 'spidermon/validation/validators/item/jsonschema': True,
+ 'start_time': datetime.datetime(2024, 6, 26, 21, 20, 19, 664615, tzinfo=datetime.timezone.utc)}
+2024-06-26 18:20:20 [scrapy.core.engine] INFO: Spider closed (finished)

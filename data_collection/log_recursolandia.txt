@@ -1,0 +1,340 @@
+2024-06-26 18:27:06 [scrapy.utils.log] INFO: Scrapy 2.11.0 started (bot: gazette)
+2024-06-26 18:27:06 [scrapy.utils.log] INFO: Versions: lxml 4.9.3.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.2, Twisted 22.10.0, Python 3.10.1 (main, May 15 2023, 19:19:30) [GCC 11.3.0], pyOpenSSL 23.2.0 (OpenSSL 3.1.3 19 Sep 2023), cryptography 41.0.4, Platform Linux-6.8.0-76060800daily20240311-generic-x86_64-with-glibc2.35
+2024-06-26 18:27:06 [municipio_mob_open_source] INFO: Collecting data from 2024-06-01 to 2024-06-26.
+2024-06-26 18:27:06 [scrapy.addons] INFO: Enabled addons:
+[]
+2024-06-26 18:27:06 [py.warnings] WARNING: /home/daniel/.pyenv/versions/3.10.1/envs/querido-diario/lib/python3.10/site-packages/scrapy/utils/request.py:254: ScrapyDeprecationWarning: '2.6' is a deprecated value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting.
+
+It is also the default value. In other words, it is normal to get this warning if you have not defined a value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting. This is so for backward compatibility reasons, but it will change in a future version of Scrapy.
+
+See the documentation of the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting for information on how to handle this deprecation.
+  return cls(crawler)
+
+2024-06-26 18:27:06 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.epollreactor.EPollReactor
+2024-06-26 18:27:06 [scrapy.extensions.telnet] INFO: Telnet Password: 0219dd33a50ab65f
+2024-06-26 18:27:07 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats',
+ 'spidermon.contrib.scrapy.extensions.Spidermon',
+ 'gazette.extensions.StatsPersist']
+2024-06-26 18:27:07 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'gazette',
+ 'COMMANDS_MODULE': 'gazette.commands',
+ 'DOWNLOAD_TIMEOUT': 360,
+ 'FILES_STORE_S3_ACL': 'public-read',
+ 'LOG_FILE': 'log_recursolandia.txt',
+ 'NEWSPIDER_MODULE': 'gazette.spiders',
+ 'SPIDER_MODULES': ['gazette.spiders'],
+ 'TEMPLATES_DIR': 'templates',
+ 'USER_AGENT': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:108.0) '
+               'Gecko/20100101 Firefox/108.0'}
+2024-06-26 18:27:07 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy_zyte_smartproxy.ZyteSmartProxyMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2024-06-26 18:27:07 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2024-06-26 18:27:07 [scrapy.middleware] INFO: Enabled item pipelines:
+['gazette.pipelines.GazetteDateFilteringPipeline',
+ 'gazette.pipelines.DefaultValuesPipeline',
+ 'gazette.pipelines.QueridoDiarioFilesPipeline',
+ 'spidermon.contrib.scrapy.pipelines.ItemValidationPipeline',
+ 'gazette.pipelines.SQLDatabasePipeline']
+2024-06-26 18:27:07 [scrapy.core.engine] INFO: Spider opened
+2024-06-26 18:27:07 [gazette.database.models] INFO: Populating 'querido_diario_spider' table - Please wait!
+2024-06-26 18:27:08 [gazette.database.models] INFO: Populating 'querido_diario_spider' table - Done!
+2024-06-26 18:27:08 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2024-06-26 18:27:08 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2024-06-26 18:27:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api-recursolandia.barcodigital.com.br/api/publico/diario/calendario?mes=6&ano=2024> (referer: None)
+2024-06-26 18:27:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/473/Edicao-n-0473-de-25-06-2024(1).pdf> (referer: None)
+2024-06-26 18:27:10 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/473/Edicao-n-0473-de-25-06-2024(1).pdf> referred in <None>
+2024-06-26 18:27:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api-recursolandia.barcodigital.com.br/api/publico/diario/calendario?mes=6&ano=2024>
+{'date': '2024-06-25',
+ 'edition_number': '0473',
+ 'file_urls': ['https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/473/Edicao-n-0473-de-25-06-2024(1).pdf'],
+ 'files': [{'checksum': '2b0721c71a30298b7e00b3836aecbdd8',
+            'path': '2024-06-25/8ba0b256d789dbf9212f9976828e36abb1a6fd98.pdf',
+            'status': 'downloaded',
+            'url': 'https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/473/Edicao-n-0473-de-25-06-2024(1).pdf'}],
+ 'is_extra_edition': False,
+ 'power': 'executive',
+ 'scraped_at': '2024-06-26T21:27:08.914041Z',
+ 'territory_id': ''}
+2024-06-26 18:27:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/471/Edicao-n-0471-de-21-06-2024(1).pdf> (referer: None)
+2024-06-26 18:27:10 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/471/Edicao-n-0471-de-21-06-2024(1).pdf> referred in <None>
+2024-06-26 18:27:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/472/Edicao-complementar-n-0472-de-24-06-2024.pdf> (referer: None)
+2024-06-26 18:27:10 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/472/Edicao-complementar-n-0472-de-24-06-2024.pdf> referred in <None>
+2024-06-26 18:27:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api-recursolandia.barcodigital.com.br/api/publico/diario/calendario?mes=6&ano=2024>
+{'date': '2024-06-21',
+ 'edition_number': '0471',
+ 'file_urls': ['https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/471/Edicao-n-0471-de-21-06-2024(1).pdf'],
+ 'files': [{'checksum': 'df4a90a3ff3197028000d3326df3bd10',
+            'path': '2024-06-21/e1357565b3b954b3315ff9e9eb21d0d53b8df13d.pdf',
+            'status': 'downloaded',
+            'url': 'https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/471/Edicao-n-0471-de-21-06-2024(1).pdf'}],
+ 'is_extra_edition': False,
+ 'power': 'executive',
+ 'scraped_at': '2024-06-26T21:27:08.949362Z',
+ 'territory_id': ''}
+2024-06-26 18:27:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api-recursolandia.barcodigital.com.br/api/publico/diario/calendario?mes=6&ano=2024>
+{'date': '2024-06-24',
+ 'edition_number': '0472',
+ 'file_urls': ['https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/472/Edicao-complementar-n-0472-de-24-06-2024.pdf'],
+ 'files': [{'checksum': '33e0becba4e1fef2764ca8a51c8cb218',
+            'path': '2024-06-24/c0ea5e96870ff14062e57b52730afeb7a2f81023.pdf',
+            'status': 'downloaded',
+            'url': 'https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/472/Edicao-complementar-n-0472-de-24-06-2024.pdf'}],
+ 'is_extra_edition': True,
+ 'power': 'executive',
+ 'scraped_at': '2024-06-26T21:27:08.929563Z',
+ 'territory_id': ''}
+2024-06-26 18:27:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/472/Edicao-n-0472-de-24-06-2024.pdf> (referer: None)
+2024-06-26 18:27:10 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/472/Edicao-n-0472-de-24-06-2024.pdf> referred in <None>
+2024-06-26 18:27:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/469/Edicao-n-0469-de-18-06-2024.pdf> (referer: None)
+2024-06-26 18:27:10 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/469/Edicao-n-0469-de-18-06-2024.pdf> referred in <None>
+2024-06-26 18:27:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/470/Edicao-complementar-n-0470-de-20-06-2024.pdf> (referer: None)
+2024-06-26 18:27:10 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/470/Edicao-complementar-n-0470-de-20-06-2024.pdf> referred in <None>
+2024-06-26 18:27:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api-recursolandia.barcodigital.com.br/api/publico/diario/calendario?mes=6&ano=2024>
+{'date': '2024-06-24',
+ 'edition_number': '0472',
+ 'file_urls': ['https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/472/Edicao-n-0472-de-24-06-2024.pdf'],
+ 'files': [{'checksum': '25b81732d3addb7a0b381c040b66af88',
+            'path': '2024-06-24/ef5e200deffc1b21961faba30866df981d726032.pdf',
+            'status': 'downloaded',
+            'url': 'https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/472/Edicao-n-0472-de-24-06-2024.pdf'}],
+ 'is_extra_edition': False,
+ 'power': 'executive',
+ 'scraped_at': '2024-06-26T21:27:08.940990Z',
+ 'territory_id': ''}
+2024-06-26 18:27:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api-recursolandia.barcodigital.com.br/api/publico/diario/calendario?mes=6&ano=2024>
+{'date': '2024-06-18',
+ 'edition_number': '0469',
+ 'file_urls': ['https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/469/Edicao-n-0469-de-18-06-2024.pdf'],
+ 'files': [{'checksum': 'c4d967896d1c255a49307eff7156f1ab',
+            'path': '2024-06-18/6094978c318c2cbbf4ce1fbc51938b83007e7941.pdf',
+            'status': 'downloaded',
+            'url': 'https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/469/Edicao-n-0469-de-18-06-2024.pdf'}],
+ 'is_extra_edition': False,
+ 'power': 'executive',
+ 'scraped_at': '2024-06-26T21:27:09.004635Z',
+ 'territory_id': ''}
+2024-06-26 18:27:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api-recursolandia.barcodigital.com.br/api/publico/diario/calendario?mes=6&ano=2024>
+{'date': '2024-06-20',
+ 'edition_number': '0470',
+ 'file_urls': ['https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/470/Edicao-complementar-n-0470-de-20-06-2024.pdf'],
+ 'files': [{'checksum': '2a5eba2d0fb88b54046346f545854c1e',
+            'path': '2024-06-20/0c1d23e05aa438ed1b698a410a7bb24e26ac3e3e.pdf',
+            'status': 'downloaded',
+            'url': 'https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/470/Edicao-complementar-n-0470-de-20-06-2024.pdf'}],
+ 'is_extra_edition': True,
+ 'power': 'executive',
+ 'scraped_at': '2024-06-26T21:27:08.964307Z',
+ 'territory_id': ''}
+2024-06-26 18:27:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/468/Edicao-n-0468-de-17-06-2024.pdf> (referer: None)
+2024-06-26 18:27:10 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/468/Edicao-n-0468-de-17-06-2024.pdf> referred in <None>
+2024-06-26 18:27:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api-recursolandia.barcodigital.com.br/api/publico/diario/calendario?mes=6&ano=2024>
+{'date': '2024-06-17',
+ 'edition_number': '0468',
+ 'file_urls': ['https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/468/Edicao-n-0468-de-17-06-2024.pdf'],
+ 'files': [{'checksum': 'a8212bf34178c426ffe23b2f72fb0ab2',
+            'path': '2024-06-17/2bb4a194a14e56dc215da1130261c78a4c9e0aa9.pdf',
+            'status': 'downloaded',
+            'url': 'https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/468/Edicao-n-0468-de-17-06-2024.pdf'}],
+ 'is_extra_edition': False,
+ 'power': 'executive',
+ 'scraped_at': '2024-06-26T21:27:09.011482Z',
+ 'territory_id': ''}
+2024-06-26 18:27:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/470/Edicao-n-0470-de-20-06-2024.pdf> (referer: None)
+2024-06-26 18:27:11 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/470/Edicao-n-0470-de-20-06-2024.pdf> referred in <None>
+2024-06-26 18:27:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api-recursolandia.barcodigital.com.br/api/publico/diario/calendario?mes=6&ano=2024>
+{'date': '2024-06-20',
+ 'edition_number': '0470',
+ 'file_urls': ['https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/470/Edicao-n-0470-de-20-06-2024.pdf'],
+ 'files': [{'checksum': '64b566517e875d947a63e27d821032d0',
+            'path': '2024-06-20/ef54ced3a872922bd60a181939bb193218b89702.pdf',
+            'status': 'downloaded',
+            'url': 'https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/470/Edicao-n-0470-de-20-06-2024.pdf'}],
+ 'is_extra_edition': False,
+ 'power': 'executive',
+ 'scraped_at': '2024-06-26T21:27:08.989774Z',
+ 'territory_id': ''}
+2024-06-26 18:27:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/467/Edicao-n-0467-de-14-06-2024.pdf> (referer: None)
+2024-06-26 18:27:11 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/467/Edicao-n-0467-de-14-06-2024.pdf> referred in <None>
+2024-06-26 18:27:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/463/Edicao-n-0463-de-06-06-2024.pdf> (referer: None)
+2024-06-26 18:27:11 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/463/Edicao-n-0463-de-06-06-2024.pdf> referred in <None>
+2024-06-26 18:27:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/466/Edicao-n-0466-de-13-06-2024(1).pdf> (referer: None)
+2024-06-26 18:27:11 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/466/Edicao-n-0466-de-13-06-2024(1).pdf> referred in <None>
+2024-06-26 18:27:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api-recursolandia.barcodigital.com.br/api/publico/diario/calendario?mes=6&ano=2024>
+{'date': '2024-06-14',
+ 'edition_number': '0467',
+ 'file_urls': ['https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/467/Edicao-n-0467-de-14-06-2024.pdf'],
+ 'files': [{'checksum': '73676c32807a2ba970de71abaa3bf29a',
+            'path': '2024-06-14/6464e00c894b1aeb62429dab9fee791c52102690.pdf',
+            'status': 'downloaded',
+            'url': 'https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/467/Edicao-n-0467-de-14-06-2024.pdf'}],
+ 'is_extra_edition': False,
+ 'power': 'executive',
+ 'scraped_at': '2024-06-26T21:27:09.023178Z',
+ 'territory_id': ''}
+2024-06-26 18:27:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/465/Edicao-n-0465-de-12-06-2024.pdf> (referer: None)
+2024-06-26 18:27:11 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/465/Edicao-n-0465-de-12-06-2024.pdf> referred in <None>
+2024-06-26 18:27:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api-recursolandia.barcodigital.com.br/api/publico/diario/calendario?mes=6&ano=2024>
+{'date': '2024-06-06',
+ 'edition_number': '0463',
+ 'file_urls': ['https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/463/Edicao-n-0463-de-06-06-2024.pdf'],
+ 'files': [{'checksum': '792bca05a5a7eb1a018a9f7f88bb28ab',
+            'path': '2024-06-06/8909a52f5a3166233af87b537a023df676c497c9.pdf',
+            'status': 'downloaded',
+            'url': 'https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/463/Edicao-n-0463-de-06-06-2024.pdf'}],
+ 'is_extra_edition': False,
+ 'power': 'executive',
+ 'scraped_at': '2024-06-26T21:27:09.034276Z',
+ 'territory_id': ''}
+2024-06-26 18:27:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api-recursolandia.barcodigital.com.br/api/publico/diario/calendario?mes=6&ano=2024>
+{'date': '2024-06-13',
+ 'edition_number': '0466',
+ 'file_urls': ['https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/466/Edicao-n-0466-de-13-06-2024(1).pdf'],
+ 'files': [{'checksum': 'a859f0b3fc514acddc36f35bec41c50e',
+            'path': '2024-06-13/ab2287446ca9414045aaf45db2687f203762ca72.pdf',
+            'status': 'downloaded',
+            'url': 'https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/466/Edicao-n-0466-de-13-06-2024(1).pdf'}],
+ 'is_extra_edition': False,
+ 'power': 'executive',
+ 'scraped_at': '2024-06-26T21:27:09.025422Z',
+ 'territory_id': ''}
+2024-06-26 18:27:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api-recursolandia.barcodigital.com.br/api/publico/diario/calendario?mes=6&ano=2024>
+{'date': '2024-06-12',
+ 'edition_number': '0465',
+ 'file_urls': ['https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/465/Edicao-n-0465-de-12-06-2024.pdf'],
+ 'files': [{'checksum': 'ca045e258b8120b0789586d8e5542d4c',
+            'path': '2024-06-12/6aa765552f019f82aa3b272a0b063d7c68f175d1.pdf',
+            'status': 'downloaded',
+            'url': 'https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/465/Edicao-n-0465-de-12-06-2024.pdf'}],
+ 'is_extra_edition': False,
+ 'power': 'executive',
+ 'scraped_at': '2024-06-26T21:27:09.027682Z',
+ 'territory_id': ''}
+2024-06-26 18:27:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/464/Edicao-n-0464-de-11-06-2024(1).pdf> (referer: None)
+2024-06-26 18:27:11 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/464/Edicao-n-0464-de-11-06-2024(1).pdf> referred in <None>
+2024-06-26 18:27:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api-recursolandia.barcodigital.com.br/api/publico/diario/calendario?mes=6&ano=2024>
+{'date': '2024-06-11',
+ 'edition_number': '0464',
+ 'file_urls': ['https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/464/Edicao-n-0464-de-11-06-2024(1).pdf'],
+ 'files': [{'checksum': '8bfb9df3d492ee5989906716f22b3de5',
+            'path': '2024-06-11/17fc0970b6cbe0279e00295c38fd1f287ea5594e.pdf',
+            'status': 'downloaded',
+            'url': 'https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/464/Edicao-n-0464-de-11-06-2024(1).pdf'}],
+ 'is_extra_edition': False,
+ 'power': 'executive',
+ 'scraped_at': '2024-06-26T21:27:09.030095Z',
+ 'territory_id': ''}
+2024-06-26 18:27:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/461/Edicao-n-0461-de-03-06-2024.pdf> (referer: None)
+2024-06-26 18:27:12 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/461/Edicao-n-0461-de-03-06-2024.pdf> referred in <None>
+2024-06-26 18:27:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api-recursolandia.barcodigital.com.br/api/publico/diario/calendario?mes=6&ano=2024>
+{'date': '2024-06-03',
+ 'edition_number': '0461',
+ 'file_urls': ['https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/461/Edicao-n-0461-de-03-06-2024.pdf'],
+ 'files': [{'checksum': 'b263fa88052d6007eade4400a7fe8381',
+            'path': '2024-06-03/da65ef3b28aeb71553e415d176f58d374cb67eb8.pdf',
+            'status': 'downloaded',
+            'url': 'https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/461/Edicao-n-0461-de-03-06-2024.pdf'}],
+ 'is_extra_edition': False,
+ 'power': 'executive',
+ 'scraped_at': '2024-06-26T21:27:09.037897Z',
+ 'territory_id': ''}
+2024-06-26 18:27:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/463/Edicao-complementar-n-0463-de-06-06-2024.pdf> (referer: None)
+2024-06-26 18:27:12 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/463/Edicao-complementar-n-0463-de-06-06-2024.pdf> referred in <None>
+2024-06-26 18:27:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/462/Edicao-n-0462-de-05-06-2024.pdf> (referer: None)
+2024-06-26 18:27:12 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/462/Edicao-n-0462-de-05-06-2024.pdf> referred in <None>
+2024-06-26 18:27:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api-recursolandia.barcodigital.com.br/api/publico/diario/calendario?mes=6&ano=2024>
+{'date': '2024-06-06',
+ 'edition_number': '0463',
+ 'file_urls': ['https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/463/Edicao-complementar-n-0463-de-06-06-2024.pdf'],
+ 'files': [{'checksum': 'c74524dc9fff91102ff4fe052d0c1375',
+            'path': '2024-06-06/6f749e1309d594b0b5928660e2cb4afee093bf77.pdf',
+            'status': 'downloaded',
+            'url': 'https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/463/Edicao-complementar-n-0463-de-06-06-2024.pdf'}],
+ 'is_extra_edition': True,
+ 'power': 'executive',
+ 'scraped_at': '2024-06-26T21:27:09.031928Z',
+ 'territory_id': ''}
+2024-06-26 18:27:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api-recursolandia.barcodigital.com.br/api/publico/diario/calendario?mes=6&ano=2024>
+{'date': '2024-06-05',
+ 'edition_number': '0462',
+ 'file_urls': ['https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/462/Edicao-n-0462-de-05-06-2024.pdf'],
+ 'files': [{'checksum': '2ef66bf862b41c054bc0ee39730499bb',
+            'path': '2024-06-05/007bc9b8367f3fd41d23b52d92970c55d3ddff8b.pdf',
+            'status': 'downloaded',
+            'url': 'https://api-recursolandia.barcodigital.com.br/arquivo/recursolandia.to.gov.br/diarios/2024/462/Edicao-n-0462-de-05-06-2024.pdf'}],
+ 'is_extra_edition': False,
+ 'power': 'executive',
+ 'scraped_at': '2024-06-26T21:27:09.036090Z',
+ 'territory_id': ''}
+2024-06-26 18:27:12 [scrapy.core.engine] INFO: Closing spider (finished)
+2024-06-26 18:27:12 [municipio_mob_open_source] INFO: [Spidermon] ------------------------------ MONITORS ------------------------------
+2024-06-26 18:27:12 [municipio_mob_open_source] INFO: [Spidermon] Comparison Between Executions/Days without gazettes... OK
+2024-06-26 18:27:12 [municipio_mob_open_source] INFO: [Spidermon] Requests/Items Ratio/Ratio of requests over items scraped count... OK
+2024-06-26 18:27:12 [municipio_mob_open_source] INFO: [Spidermon] Error Count Monitor/test_stat_monitor... SKIPPED (Unable to find 'log_count/ERROR' in job stats.)
+2024-06-26 18:27:12 [municipio_mob_open_source] INFO: [Spidermon] Finish Reason Monitor/Should have the expected finished reason(s)... OK
+2024-06-26 18:27:12 [municipio_mob_open_source] INFO: [Spidermon] Item Validation Monitor/test_stat_monitor... SKIPPED (Unable to find 'spidermon/validation/fields/errors' in job stats.)
+2024-06-26 18:27:12 [municipio_mob_open_source] INFO: [Spidermon] ----------------------------------------------------------------------
+2024-06-26 18:27:12 [municipio_mob_open_source] INFO: [Spidermon] 5 monitors in 0.018s
+2024-06-26 18:27:12 [municipio_mob_open_source] INFO: [Spidermon] OK (skipped=2)
+2024-06-26 18:27:12 [municipio_mob_open_source] INFO: [Spidermon] -------------------------- FINISHED ACTIONS --------------------------
+2024-06-26 18:27:12 [municipio_mob_open_source] INFO: [Spidermon] ----------------------------------------------------------------------
+2024-06-26 18:27:12 [municipio_mob_open_source] INFO: [Spidermon] 0 actions in 0.000s
+2024-06-26 18:27:12 [municipio_mob_open_source] INFO: [Spidermon] OK
+2024-06-26 18:27:12 [municipio_mob_open_source] INFO: [Spidermon] --------------------------- PASSED ACTIONS ---------------------------
+2024-06-26 18:27:12 [municipio_mob_open_source] INFO: [Spidermon] ----------------------------------------------------------------------
+2024-06-26 18:27:12 [municipio_mob_open_source] INFO: [Spidermon] 0 actions in 0.000s
+2024-06-26 18:27:12 [municipio_mob_open_source] INFO: [Spidermon] OK
+2024-06-26 18:27:12 [municipio_mob_open_source] INFO: [Spidermon] --------------------------- FAILED ACTIONS ---------------------------
+2024-06-26 18:27:12 [municipio_mob_open_source] INFO: [Spidermon] ----------------------------------------------------------------------
+2024-06-26 18:27:12 [municipio_mob_open_source] INFO: [Spidermon] 1 action in 0.000s
+2024-06-26 18:27:12 [municipio_mob_open_source] INFO: [Spidermon] OK (skipped=1)
+2024-06-26 18:27:12 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 6152,
+ 'downloader/request_count': 17,
+ 'downloader/request_method_count/GET': 17,
+ 'downloader/response_bytes': 6316914,
+ 'downloader/response_count': 17,
+ 'downloader/response_status_count/200': 17,
+ 'elapsed_time_seconds': 4.209628,
+ 'file_count': 16,
+ 'file_status_count/downloaded': 16,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2024, 6, 26, 21, 27, 12, 295040, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 11057,
+ 'httpcompression/response_count': 1,
+ 'item_scraped_count': 16,
+ 'log_count/DEBUG': 50,
+ 'log_count/INFO': 33,
+ 'log_count/WARNING': 1,
+ 'memusage/max': 122953728,
+ 'memusage/startup': 122953728,
+ 'response_received_count': 17,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'spidermon/validation/fields': 128,
+ 'spidermon/validation/items': 16,
+ 'spidermon/validation/validators': 1,
+ 'spidermon/validation/validators/item/jsonschema': True,
+ 'start_time': datetime.datetime(2024, 6, 26, 21, 27, 8, 85412, tzinfo=datetime.timezone.utc)}
+2024-06-26 18:27:12 [scrapy.core.engine] INFO: Spider closed (finished)
